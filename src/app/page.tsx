@@ -1,21 +1,22 @@
 "use client";
-import AnimatedGradient from "@/fancy/components/background/animated-gradient-with-svg";
+
+import Image from "next/image";
 
 export default function Home() {
     return (
         <main className="min-h-screen bg-white text-gray-800">
             {/* Hero Section */}
             <section className="max-w-5xl h-screen flex justify-center items-center mx-auto px-6 pt-24 pb-20">
-                <div className="opacity-10 pointer-events-none">
-                    <AnimatedGradient
-                        colors={["#3B82F6", "#60A5FA", "#93C5FD"]}
-                        speed={0.05}
-                        blur="medium"
-                    />
-                </div>
-                <div className="max-w-3xl mx-auto text-center space-y-8">
+                <Image
+                    src={"/bg.png"}
+                    alt="Background"
+                    className="absolute z-0  top-0 left-0 h-dvh w-screen object-cover opacity-50"
+                    width={1000}
+                    height={1000}
+                />
+                <div className="max-w-3xl z-10 mx-auto text-center space-y-8">
                     <h1 className="text-4xl sm:text-5xl font-bold leading-tight tracking-tight">
-                        Your Professional Identity,{" "}
+                        Your Professional Identity <br />
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
                             API-Powered
                         </span>
@@ -52,52 +53,6 @@ export default function Home() {
                         </svg>
                         No credit card required • Cancel anytime
                     </p>
-                </div>
-            </section>
-
-            {/* Social Proof Bar */}
-            <section className="bg-gray-50 py-8">
-                <div className="max-w-5xl mx-auto px-6">
-                    <p className="text-center text-gray-600 font-medium mb-6">
-                        Trusted by professionals from
-                    </p>
-                    <div className="flex justify-center items-center flex-wrap gap-12 opacity-80">
-                        <svg
-                            className="h-6 text-gray-400"
-                            viewBox="0 0 24 28"
-                            fill="currentColor"
-                        >
-                            <path d="M22.2,6c-1.2-1.2-2.9-1.8-4.6-1.8c-1.8,0-3.5,0.6-4.8,1.8c-0.6,0.6-1.1,1.2-1.4,1.9c-0.4-0.7-0.8-1.3-1.4-1.9C8.7,4.8,7,4.2,5.3,4.2C3.5,4.2,1.8,4.8,0.6,6c-1.2,1.2-1.8,2.9-1.8,4.6s0.6,3.5,1.8,4.8l10,10c0.1,0.1,0.2,0.2,0.3,0.2c0.1,0.1,0.3,0.1,0.4,0.1s0.3,0,0.4-0.1c0.1-0.1,0.2-0.1,0.3-0.2l10-10c1.2-1.2,1.8-2.9,1.8-4.8S23.4,7.2,22.2,6z" />
-                        </svg>
-                        <svg
-                            className="h-6 text-gray-400"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                        >
-                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14h-2v-4H9v-2h3V8h2v3h3v2h-3v4z" />
-                        </svg>
-                        <svg
-                            className="h-6 text-gray-400"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                        >
-                            <path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3-3.28 4.44-6.51 4.44C7.98 18.27 4.67 15 4.67 12s3.31-6.27 7.51-6.27c1.98 0 3.75.7 5.28 1.86l2.03-2.03C17.39 3.68 14.66 2.53 12 2.53 6.26 2.53 2 6.79 2 12s4.26 9.47 10 9.47c5.18 0 9.13-3.67 9.13-8.82 0-.49-.07-.86-.22-1.55z" />
-                        </svg>
-                        <svg
-                            className="h-6 text-gray-400"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                        >
-                            <path d="M20.9,2H3.1C2.5,2,2,2.5,2,3.1v17.8C2,21.5,2.5,22,3.1,22h17.8c0.6,0,1.1-0.5,1.1-1.1V3.1C22,2.5,21.5,2,20.9,2z M8.9,18.9h-3v-9h3V18.9z M7.4,8.7c-1,0-1.7-0.8-1.7-1.7s0.8-1.7,1.7-1.7c0.9,0,1.7,0.8,1.7,1.7S8.4,8.7,7.4,8.7z M18.9,18.9h-3v-4.8c0-1.2,0-2.7-1.7-2.7c-1.7,0-1.9,1.3-1.9,2.6v5h-3v-9h2.8v1.3h0c0.4-0.8,1.5-1.7,3-1.7c3.2,0,3.8,2.1,3.8,4.9V18.9z" />
-                        </svg>
-                        <svg
-                            className="h-6 text-gray-400"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                        >
-                            <path d="M22,5.8a8.4,8.4,0,0,1-2.4.7,4.2,4.2,0,0,0,1.8-2.3,8.3,8.3,0,0,1-2.6,1,4.2,4.2,0,0,0-7.2,3.8A11.9,11.9,0,0,1,3,4.2,4.2,4.2,0,0,0,4.3,9.9,4.1,4.1,0,0,1,2.8,9.3v0A4.2,4.2,0,0,0,6.1,13.4a4.1,4.1,0,0,1-1.9.1,4.2,4.2,0,0,0,3.9,2.9A8.4,8.4,0,0,1,2,18.3a11.8,11.8,0,0,0,6.4,1.9A11.8,11.8,0,0,0,20.3,8.4c0-.2,0-.4,0-.5A8.6,8.6,0,0,0,22,5.8Z" />
-                        </svg>
-                    </div>
                 </div>
             </section>
 
@@ -228,6 +183,52 @@ export default function Home() {
                                 </p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Social Proof Bar */}
+            <section className="bg-gray-50 py-8">
+                <div className="max-w-5xl mx-auto px-6">
+                    <p className="text-center text-gray-600 font-medium mb-6">
+                        Trusted by professionals from
+                    </p>
+                    <div className="flex justify-center items-center flex-wrap gap-12 opacity-80">
+                        <svg
+                            className="h-6 text-gray-400"
+                            viewBox="0 0 24 28"
+                            fill="currentColor"
+                        >
+                            <path d="M22.2,6c-1.2-1.2-2.9-1.8-4.6-1.8c-1.8,0-3.5,0.6-4.8,1.8c-0.6,0.6-1.1,1.2-1.4,1.9c-0.4-0.7-0.8-1.3-1.4-1.9C8.7,4.8,7,4.2,5.3,4.2C3.5,4.2,1.8,4.8,0.6,6c-1.2,1.2-1.8,2.9-1.8,4.6s0.6,3.5,1.8,4.8l10,10c0.1,0.1,0.2,0.2,0.3,0.2c0.1,0.1,0.3,0.1,0.4,0.1s0.3,0,0.4-0.1c0.1-0.1,0.2-0.1,0.3-0.2l10-10c1.2-1.2,1.8-2.9,1.8-4.8S23.4,7.2,22.2,6z" />
+                        </svg>
+                        <svg
+                            className="h-6 text-gray-400"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                        >
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14h-2v-4H9v-2h3V8h2v3h3v2h-3v4z" />
+                        </svg>
+                        <svg
+                            className="h-6 text-gray-400"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                        >
+                            <path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3-3.28 4.44-6.51 4.44C7.98 18.27 4.67 15 4.67 12s3.31-6.27 7.51-6.27c1.98 0 3.75.7 5.28 1.86l2.03-2.03C17.39 3.68 14.66 2.53 12 2.53 6.26 2.53 2 6.79 2 12s4.26 9.47 10 9.47c5.18 0 9.13-3.67 9.13-8.82 0-.49-.07-.86-.22-1.55z" />
+                        </svg>
+                        <svg
+                            className="h-6 text-gray-400"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                        >
+                            <path d="M20.9,2H3.1C2.5,2,2,2.5,2,3.1v17.8C2,21.5,2.5,22,3.1,22h17.8c0.6,0,1.1-0.5,1.1-1.1V3.1C22,2.5,21.5,2,20.9,2z M8.9,18.9h-3v-9h3V18.9z M7.4,8.7c-1,0-1.7-0.8-1.7-1.7s0.8-1.7,1.7-1.7c0.9,0,1.7,0.8,1.7,1.7S8.4,8.7,7.4,8.7z M18.9,18.9h-3v-4.8c0-1.2,0-2.7-1.7-2.7c-1.7,0-1.9,1.3-1.9,2.6v5h-3v-9h2.8v1.3h0c0.4-0.8,1.5-1.7,3-1.7c3.2,0,3.8,2.1,3.8,4.9V18.9z" />
+                        </svg>
+                        <svg
+                            className="h-6 text-gray-400"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                        >
+                            <path d="M22,5.8a8.4,8.4,0,0,1-2.4.7,4.2,4.2,0,0,0,1.8-2.3,8.3,8.3,0,0,1-2.6,1,4.2,4.2,0,0,0-7.2,3.8A11.9,11.9,0,0,1,3,4.2,4.2,4.2,0,0,0,4.3,9.9,4.1,4.1,0,0,1,2.8,9.3v0A4.2,4.2,0,0,0,6.1,13.4a4.1,4.1,0,0,1-1.9.1,4.2,4.2,0,0,0,3.9,2.9A8.4,8.4,0,0,1,2,18.3a11.8,11.8,0,0,0,6.4,1.9A11.8,11.8,0,0,0,20.3,8.4c0-.2,0-.4,0-.5A8.6,8.6,0,0,0,22,5.8Z" />
+                        </svg>
                     </div>
                 </div>
             </section>
